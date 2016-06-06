@@ -1,0 +1,12 @@
+dependencies:
+  override:
+    - sudo mkdir -p /opt/ernest-libraries/salt
+    - sudo chmod 777 /opt/ernest-libraries/salt
+    - git clone git@github.com:ErnestIO/salt.git /opt/ernest-libraries/salt
+    - make dev-deps
+
+test:
+  override:
+    - make test
+    - make lint
+    - make cover
