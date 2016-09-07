@@ -4,8 +4,8 @@ This microservice interacts with salt stak and performs executions on remote hos
 
 ## Build status
 
-* master: [![CircleCI](https://circleci.com/gh/ErnestIO/execution-builder/tree/master.svg?style=svg)](https://circleci.com/gh/ErnestIO/execution-builder/tree/master)
-* develop: [![CircleCI](https://circleci.com/gh/ErnestIO/execution-builder/tree/develop.svg?style=svg)](https://circleci.com/gh/ErnestIO/execution-builder/tree/develop)
+* master: [![CircleCI](https://circleci.com/gh/ernestio/execution-builder/tree/master.svg?style=svg)](https://circleci.com/gh/ernestio/execution-builder/tree/master)
+* develop: [![CircleCI](https://circleci.com/gh/ernestio/execution-builder/tree/develop.svg?style=svg)](https://circleci.com/gh/ernestio/execution-builder/tree/develop)
 
 ## Installation
 
