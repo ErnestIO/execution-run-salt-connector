@@ -16,7 +16,8 @@ def execute_command(data)
       endpoint: data[:service_endpoint],
       port: '8000',
       user: data[:service_options][:user],
-      pass: data[:service_options][:password])
+      pass: data[:service_options][:password]
+    )
 
     params = { arg: data[:execution_payload] }
     fun = data[:execution_function]
@@ -96,7 +97,7 @@ end
 
 unless defined? @@test
   sleep 5
-  @data       = { id: SecureRandom.uuid, type: ARGV[0] }
+  @data = { id: SecureRandom.uuid, type: ARGV[0] }
   @data.merge! JSON.parse(ARGV[1], symbolize_names: true)
   original_stdout = $stdout
   $stdout = StringIO.new
