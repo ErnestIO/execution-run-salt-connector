@@ -64,22 +64,19 @@ def execute_command(data)
         data[:execution_matched_instances] = job.minions
 
         if job.reports.collect(&:retcode).sort.uniq.count > 1
-          data[:type] = 'execution.create.salt.error'
+          data[:type] = data[:type] + '.error'
           data[:execution_status] = 'failed'
         else
-          data[:type] = 'execution.create.salt.done'
+          data[:type] = data[:type] + '.done'
           data[:execution_status] = 'success'
         end
 
-        break
-
+        return data
       end
     end
-    data[:type] = data[:type] + '.done'
-    return data
   rescue => e
     puts e
-    data[:type] = data[:type] + '.error'
+    data[:type] = data[:type] + '.error' unless data[:type].include? '.error'
     return data
   end
 end
