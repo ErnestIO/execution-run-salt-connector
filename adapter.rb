@@ -75,11 +75,11 @@ def execute_command(data)
 
       end
     end
-    data[:type] = 'execution.create.salt.done'
+    data[:type] = data[:type] + '.done'
     return data
   rescue => e
     puts e
-    data[:type] = 'execution.create.salt.error'
+    data[:type] = data[:type] + '.error'
     return data
   end
 end
